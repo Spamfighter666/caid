@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CAID — Canadian Antisemitic Incident Dataset</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand-row">
+        <a class="brand" href="./">CAID</a>
+        <nav class="top-nav">
+          <a href="./">Dataset</a>
+          <a href="./README.html">Method</a>
+          <a href="./data/incidents.csv">CSV</a>
+          <a href="./data/incidents.json">JSON</a>
+        </nav>
+      </div>
+      <h1>Canadian Antisemitic Incident Dataset</h1>
+      <p class="lede">Phase 1 public release. Search, filter, and browse incident records from the public-facing CAID export.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro-card">
+      <p>This site publishes a sanitized public dataset derived from the internal CAID master workbook. It displays only the public-facing incident table and allows record-level detail pages.</p>
+    </section>
+
+    <section class="filters-card">
+      <div class="filters-grid">
+        <label>
+          <span>Search</span>
+          <input id="searchBox" type="search" placeholder="Search target, city, description, charges…" />
+        </label>
+        <label>
+          <span>Province</span>
+          <select id="provinceFilter"><option value="">All</option></select>
+        </label>
+        <label>
+          <span>Incident Type</span>
+          <select id="incidentTypeFilter"><option value="">All</option></select>
+        </label>
+        <label>
+          <span>Target Type</span>
+          <select id="targetTypeFilter"><option value="">All</option></select>
+        </label>
+        <label>
+          <span>Severity</span>
+          <select id="severityFilter"><option value="">All</option></select>
+        </label>
+      </div>
+      <div class="results-meta">
+        <span id="resultsCount">Loading…</span>
+      </div>
+    </section>
+
+    <section class="table-card">
+      <table id="incidentTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>City</th>
+            <th>Province</th>
+            <th>Target</th>
+            <th>Target Type</th>
+            <th>Incident Type</th>
+            <th>Severity</th>
+            <th>Arrests</th>
+          </tr>
+        </thead>
+        <tbody id="incidentTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>CAID — Canadian Antisemitic Incident Dataset</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

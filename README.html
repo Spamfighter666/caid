@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CAID — Method</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand-row">
+        <a class="brand" href="./">CAID</a>
+        <nav class="top-nav">
+          <a href="./">Dataset</a>
+          <a href="./README.html">Method</a>
+        </nav>
+      </div>
+      <h1>Method and Publication Notes</h1>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="detail-card">
+      <p>This Phase 1 website publishes a sanitized public export of Sheet1 from the CAID master workbook.</p>
+      <p>The public site intentionally omits internal analysis fields, network intelligence layers, monitoring notes, and other analyst-facing metadata. Records are presented for browsing, filtering, and record-level review.</p>
+      <h2>Public fields</h2>
+      <p>Date, city, province, target, target type, incident type, public summary, severity, arrests, charges, and source.</p>
+      <h2>Private fields withheld</h2>
+      <p>Internal monitoring notes, network mappings, actor analysis, investigative flags, and other analyst-use columns.</p>
+      <h2>Deployment model</h2>
+      <p>Static GitHub Pages site driven by a JSON export derived from the private master workbook.</p>
+    </article>
+  </main>
+</body>
+</html>
